@@ -4,8 +4,8 @@ DOMAIN=xnxxms.cloud
 sub=$(cat /root/subdomainx)
 dns=${sub}.xnxxms.cloud
 dns2=*.${sub}.xnxxms.cloud
-CF_ID=kadeknovi148@gmail.com
-CF_KEY=45c11fd84f3ee1ce33070b0b653044e33b051
+CF_ID=k48@gmail.com
+CF_KEY=45c11fd84f3ee1ce33070b0b65044e33b051
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${dns}..."
@@ -47,8 +47,8 @@ DOMAIN=xnxxms.cloud
 sub=$(cat /root/subdomainx)
 dns=${sub}.xnxxms.cloud
 dns2=*.${sub}.xnxxms.cloud
-CF_ID=kadeknovi148@gmail.com
-CF_KEY=45c11fd84f3ee1ce33070b0b653044e33b051
+CF_ID=kovi148@gmail.com
+CF_KEY=45c11fd84f3ee1ce33070b0b65304e33b051
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${dns}..."
