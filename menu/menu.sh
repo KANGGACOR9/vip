@@ -47,7 +47,7 @@ fi
 function key(){
 rm -rf /root/rmbl
 echo -e  "${COLOR1}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${COLOR1}│              PASWORD SCRIPT RMBL VPN     │${NC}"
+echo -e  "${COLOR1}│              PASWORD SCRIPT KANGGACOR VIP     │${NC}"
 echo -e  "${COLOR1}└──────────────────────────────────────────┘${NC}"
 echo " "
 read -rp "Masukan Key Kamu Disini ctrl + c Exit : " -e kode
