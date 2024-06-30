@@ -409,12 +409,10 @@ echo -e "$COLOR1 $NC  ${WH}�� Websocket TLS           ${COLOR1}: ${WH}$swstl
 echo -e "$COLOR1 $NC  ${WH}�� Websocket None TLS      ${COLOR1}: ${WH}$swstls${NC}"
 echo -e "$COLOR1 $NC  ${WH}�� Websocket None TLS      ${COLOR1}: ${WH}$swstls${NC}"
 echo -e "$COLOR1 $NC  ${WH}�� SSH UDP COSTUM          ${COLOR1}: ${WH}$udp${NC}"
-echo -e "$COLOR1 $NC  ${WH}�� SlowDNS CLIENT          ${COLOR1}: ${WH}$slc${NC}"
-echo -e "$COLOR1 $NC  ${WH}�� SlowDNS SERVER          ${COLOR1}: ${WH}$sls${NC}"
 echo -e "$COLOR1└───────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌───────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}♧ SCRIPT ♧ ${NC}                    $COLOR1 $NC"
 echo -e "$COLOR1 ${NC}                ${WH}♤ PREMIUM ♤ ${NC}                   $COLOR1 $NC"
 echo -e "$COLOR1└───────────────────────────────────────────────────┘${NC}"
 read -n 1 -s -r -p "Press any key to Enter Menu Service"
-menuService
+menu
