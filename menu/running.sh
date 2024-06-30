@@ -417,4 +417,4 @@ echo -e "$COLOR1 ${NC}                ${WH}♧ SCRIPT ♧ ${NC}                 
 echo -e "$COLOR1 ${NC}                ${WH}♤ PREMIUM ♤ ${NC}                   $COLOR1 $NC"
 echo -e "$COLOR1└───────────────────────────────────────────────────┘${NC}"
 read -n 1 -s -r -p "Press any key to Enter Menu Service"
-menu
+menuService
