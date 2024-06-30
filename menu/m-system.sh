@@ -263,7 +263,7 @@ clear
 echo -e  "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e  "$COLOR1│             ${WH}TERIMA KASIH                 $COLOR1│${NC}"
 echo -e  "$COLOR1│        ${WH}SUDAH MENGGUNAKAN SCRIPT          $COLOR1│${NC}"
-echo -e  "$COLOR1│               ${WH}RMBL VPN                   $COLOR1│${NC}"
+echo -e  "$COLOR1│               ${WH}KANGGACOR VIP                   $COLOR1│${NC}"
 echo -e  "$COLOR1└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dns1 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -277,7 +277,7 @@ clear
 echo -e  "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e  "$COLOR1│             ${WH}TERIMA KASIH                 $COLOR1│${NC}"
 echo -e  "$COLOR1│        ${WH}SUDAH MENGGUNAKAN SCRIPT          $COLOR1│${NC}"
-echo -e  "$COLOR1│               ${WH}RMBL VPN                   $COLOR1│${NC}"
+echo -e  "$COLOR1│               ${WH}KANGGACOR VIP                   $COLOR1│${NC}"
 echo -e  "$COLOR1└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dns2 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -292,7 +292,7 @@ clear
 echo -e  "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e  "$COLOR1│             ${WH}TERIMA KASIH                 $COLOR1│${NC}"
 echo -e  "$COLOR1│        ${WH}SUDAH MENGGUNAKAN SCRIPT          $COLOR1│${NC}"
-echo -e  "$COLOR1│               ${WH}RMBL VPN                   $COLOR1│${NC}"
+echo -e  "$COLOR1│               ${WH}KANGGACOR VIP                   $COLOR1│${NC}"
 echo -e  "$COLOR1└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dnscl =~ ^[a-zA-Z0-9_.-]+$ ]]; do
