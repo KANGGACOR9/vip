@@ -376,7 +376,7 @@ clear
 clear && clear && clear
 clear;clear;clear
 echo -e " $COLOR1╔══════════════════════════════════════════════════════════╗${NC}"
-echo -e " $COLOR1║${NC}${COLBG1}                 ${WH} • KANGGACOR VIP TUNNELING •                 ${NC}$COLOR1║ $NC"
+echo -e " $COLOR1║${NC}${COLBG1}              ${WH} • KANGGACOR VIP TUNNELING •                 ${NC}$COLOR1║ $NC"
 echo -e " $COLOR1╚══════════════════════════════════════════════════════════╝${NC}"
 echo -e " $COLOR1╔══════════════════════════════════════════════════════════╗${NC}"
 echo -e " $COLOR1║$NC${WH}• OS            ${COLOR1}: ${WH}$MODEL2${NC}"
@@ -454,7 +454,7 @@ d2=$(date -d "$today" +%s)
 certificate=$(( (d1 - d2) / 86400 ))
 domain=$(cat /etc/xray/domain)
 function bannner(){
-wget -O /etc/issue.net "https://raw.githubusercontent.com/KANGGACOR9/v/install/main/issue.net" &> /dev/null
+wget -O /etc/issue.net "https://raw.githubusercontent.com/KANGGACOR9/vip/install/main/issue.net" &> /dev/null
 echo "6531534912:AAEMmubeZLlXxRPt7tr5drirt2EHNCN3TF0" > /usr/bin/token
 echo "6447416716" > /usr/bin/idchat
 echo "6531534912:AAEMmubeZLlXxRPt7tr5drirt2EHNCN3TF0" > /etc/perlogin/token
