@@ -71,26 +71,26 @@ echo -e "\033[0;33m]\033[1;37m -\033[1;32m Succes !\033[1;37m"
 tput cnorm
 }
 sldns() {
-wget https://raw.githubusercontent.com/KANGGACOR9/vip/main/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+wget --no-check-certificate https://raw.githubusercontent.com/KANGGACOR9/vip/main/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 }
 res1() {
-wget https://raw.githubusercontent.com/KANGGACOR9/vip/main/slowdns/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
+wget --no-check-certificate http://rmblvpn.my.id/slowdns/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
 clear
 }
+#res2() {
+#wget https://raw.githubusercontent.com/VIP-VPN/vip/main/slowdns/rmbl1.sh && chmod +x rmbl1.sh && ./rmbl1.sh
+#clear
+#}
 res2() {
-wget https://raw.githubusercontent.com/KANGGACOR9/vip/main/slowdns/rmbl1.sh && chmod +x rmbl1.sh && ./rmbl1.sh
+wget --no-check-certificate http://rmblvpn.my.id/slowdns/rmbl2.sh && chmod +x rmbl2.sh && ./rmbl2.sh
 clear
 }
 res3() {
-wget https://raw.githubusercontent.com/KANGGACOR9/vip/main/slowdns/rmbl2.sh && chmod +x rmbl2.sh && ./rmbl2.sh
-clear
-}
-res4() {
-wget https://raw.githubusercontent.com/KANGGACOR9/vip/main/slowdns/rmbl3.sh && chmod +x rmbl3.sh && ./rmbl3.sh
+wget --no-check-certificate http://rmblvpn.my.id/slowdns/rmbl3.sh && chmod +x rmbl3.sh && ./rmbl3.sh
 clear
 }
 res5() {
-wget https://raw.githubusercontent.com/KANGGACOR9/vip/main/slowdns/rmbl4.sh && chmod +x rmbl4.sh && ./rmbl4.sh
+wget --no-check-certificate http://rmblvpn.my.id/slowdns/rmbl4.sh && chmod +x rmbl4.sh && ./rmbl4.sh
 clear
 }
 clear
@@ -131,7 +131,10 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│  [ 1 ]  \033[1;37mDomain xxx.xnxxms.cloud       ${NC}"
 echo -e "$COLOR1│  "
-echo -e "$COLOR1│  [ 2 ]  \033[1;37mDomain xxx.adijaya.cloud     ${NC}"
+echo -e "$COLOR1│  [ 2 ]  \033[1;37mDomain xxx.berurat.cloud ${NC}"
+echo -e "$COLOR1│  "
+echo -e "$COLOR1│  [ 3 ]  \033[1;37mDomain xxx.adijaya.cloud     ${NC}"
+echo -e "$COLOR1│  "
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
 until [[ $domain2 =~ ^[1-5]+$ ]]; do
 read -p "   Please select numbers : " domain2
@@ -157,7 +160,7 @@ fi
 if [[ $domain2 == "2" ]]; then
 clear
 echo -e  "$COLOR1┌──────────────────────────────────────────┐${NC}"
-echo -e  "$COLOR1│  \033[1;37mContoh subdomain xxx.adijaya.cloud      $COLOR1│${NC}"
+echo -e  "$COLOR1│  \033[1;37mContoh subdomain xxx.berurat.cloud      $COLOR1│${NC}"
 echo -e  "$COLOR1│    \033[1;37mxxx jadi subdomain kamu               $COLOR1│${NC}"
 echo -e  "$COLOR1└──────────────────────────────────────────┘${NC}"
 echo " "
@@ -175,7 +178,7 @@ fi
 if [[ $domain2 == "3" ]]; then
 clear
 echo -e  "$COLOR1┌──────────────────────────────────────────┐${NC}"
-echo -e  "$COLOR1│  \033[1;37mContoh subdomain xxx.adijayavvip.cloud  $COLOR1│${NC}"
+echo -e  "$COLOR1│  \033[1;37mContoh subdomain xxx.adijaya.cloud  $COLOR1│${NC}"
 echo -e  "$COLOR1│    \033[1;37mxxx jadi subdomain kamu               $COLOR1│${NC}"
 echo -e  "$COLOR1└──────────────────────────────────────────┘${NC}"
 echo " "
@@ -923,7 +926,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│  [ 1 ]  ${WH}XRAY CORE OFFICIAL       ${NC}"
 echo -e "$COLOR1│"
-echo -e "$COLOR1│  [ 2 ]  ${WH}XRAY CORE MOD DHARAK    ${NC}"
+echo -e "$COLOR1│  [ 2 ]  ${WH}XRAY CORE MOD    ${NC}"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
 until [[ $core =~ ^[0-9]+$ ]]; do
 read -p "   Please select numbers 1-2 or Any Button(EXIT) : " core
@@ -942,7 +945,7 @@ echo -e " "
 cp -r /usr/local/bin/modxray /usr/local/bin/xray &> /dev/null
 chmod 755 /usr/local/bin/xray
 systemctl restart xray
-echo -e  "$COLOR1 [ INFO ] ${WH}Succes Change Xray Core Mod Dharak"
+echo -e  "$COLOR1 [ INFO ] ${WH}Succes Change Xray Core Mod "
 fi
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
