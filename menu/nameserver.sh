@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 REPOS="https://raw.githubusercontent.com/diah082/newbie/main/"
 ns_domain_cloudflare() {
 	DOMAIN=$(cat /etc/xray/domain | cut -d "." -f2-4)
@@ -7,7 +7,8 @@ ns_domain_cloudflare() {
 	SUB_DOMAIN=${SUB}.${DOMAIN}
 	NS_DOMAIN=ns.${SUB_DOMAIN}
 	CF_ID=tezarmuhammadjunedi@gmail.com
-    	CF_KEY=e7f71c79a922d7e8493cae29febc76fdb654d
+    CF_KEY=e7f71c79a922d7e8493cae29febc76fdb654d
+	set -euo pipefail
 	IP=$(wget -qO- ipinfo.io/ip)
 	echo "Updating DNS NS for ${NS_DOMAIN}..."
 	ZONE=$(
@@ -58,8 +59,7 @@ setup_dnstt() {
 	wget -O /etc/systemd/system/server.service "${REPOS}Fls/server" >/dev/null 2>&1
 	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/systemd/system/client.service 
 	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/systemd/system/server.service 
-	systemctl daemon-reload
- 	systemctl start server
+	systemctl start server
 	systemctl start client
 	systemctl enable server
 	systemctl enable client
