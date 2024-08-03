@@ -31,7 +31,7 @@ wget -q -O /usr/bin/trialssh "https://raw.githubusercontent.com/KANGGACOR9/vip/m
 wget -q -O /usr/bin/autocpu "https://raw.githubusercontent.com/KANGGACOR9/vip/main/install/autocpu.sh" && chmod +x /usr/bin/autocpu
 wget -q -O /usr/bin/bantwidth "https://raw.githubusercontent.com/KANGGACOR9/vip/main/install/bantwidth" && chmod +x /usr/bin/bantwidth
 wget -q -O /usr/bin/pointing "https://raw.githubusercontent.com/KANGGACOR9/vip/main/menu/pointing.sh" && chmod +x /usr/bin/pointing
-wget -q -O /usr/bin/nameserver "https://raw.githubusercontent.com/KANGGACOR9/vip/main/menu/nameserver" && chmod +x /usr/bin/nameserver
+wget -q -O /usr/bin/nameserver "https://raw.githubusercontent.com/KANGGACOR9/vip/main/menu/nameserver.sh" && chmod +x /usr/bin/nameserver
 echo -e " [INFO] Download File Successfully"
 sleep 2
 exit
