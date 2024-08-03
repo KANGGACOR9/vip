@@ -307,7 +307,7 @@ wget https://raw.githubusercontent.com/KANGGACOR9/vip/main/install/rmbl.sh && ch
 clear
 }
 res2() {
-wget https://raw.githubusercontent.com/KANGGACOR9/v1/main/install/r1.sh && chmod +x cr1.sh && ./per1.sh
+wget https://raw.githubusercontent.com/KANGGACOR9/vip/main/install/r1.sh && chmod +x r1.sh && ./r1.sh
 clear
 }
 res3() {
@@ -371,16 +371,19 @@ echo -e "${tyblue}┌───────────────────�
 echo -e "${tyblue}│ \033[1;37mPlease select a your Choice to Set Domain${tyblue}│${NC}"
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "${tyblue}│  [ 1 ]  \033[1;37mDomain xxx.rmblvpn.xyz          ${NC}"                                        
+echo -e "${tyblue}│  [ 1 ]  \033[1;37mDomain xxx.server-tunneling.systems          ${NC}"
+echo -e "${tyblue}│  [ 2 ]  \033[1;37mDomain xxx.supersaiya.ninja          ${NC}"
+echo -e "${tyblue}│  [ 3 ]  \033[1;37mDomain xxx.vpn-premium.my.id          ${NC}"
+echo -e "${tyblue}│  [ 4 ]  \033[1;37mDomain xxx.vpn-premium.tech          ${NC}"                                        
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-until [[ $domain2 =~ ^[1-5]+$ ]]; do 
-read -p "   Please select numbers 1 sampai 1 : " domain2
+until [[ $domain2 =~ ^[1-4]+$ ]]; do 
+read -p "   Please select numbers 1 sampai 4 : " domain2
 done
 fi
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.rmblvpn.xyz        ${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.server-tunneling.systems        ${tyblue}│${NC}"
 echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
@@ -394,14 +397,19 @@ rm -rf /etc/per
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 mkdir -p /etc/nsdomain
-mkdir -p /etc/per
-touch /etc/per/id
-touch /etc/per/token
 touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/slwdomain
 touch /etc/v2ray/scdomain
-echo "$dn1" > /root/subdomainx
+echo "$dn1" > /root/domain
+echo "$dn1" > /root/scdomain
+echo "$dn1" > /etc/xray/scdomain
+echo "$dn1" > /etc/v2ray/scdomain
+echo "$dn1" > /etc/xray/domain
+echo "$dn1" > /etc/v2ray/domain
+echo "IP=$dn1" > /var/lib/ipvps.conf
+echo ""
+clear
 cd
 sleep 1
 fun_bar 'res1'
@@ -410,7 +418,7 @@ rm /root/subdomainx
 elif [[ $domain2 == "2" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vpnvip.app         ${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.supersaiya.ninja         ${tyblue}│${NC}"
 echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
@@ -424,23 +432,26 @@ rm -rf /etc/per
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 mkdir -p /etc/nsdomain
-mkdir -p /etc/per
-touch /etc/per/id
-touch /etc/per/token
 touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/slwdomain
 touch /etc/v2ray/scdomain
-echo "$dn2" > /root/subdomainx
+echo "$dn2" > /root/domain
+echo "$dn2" > /root/scdomain
+echo "$dn2" > /etc/xray/scdomain
+echo "$dn2" > /etc/v2ray/scdomain
+echo "$dn2" > /etc/xray/domain
+echo "$dn2" > /etc/v2ray/domain
+echo "IP=$dn2" > /var/lib/ipvps.conf
+echo ""
 cd
 sleep 1
-fun_bar 'res2'
+fun_bar 'res1'
 clear
-rm /root/subdomainx
 elif [[ $domain2 == "3" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.slowapp.cfd        ${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vpn-premium.my.id        ${tyblue}│${NC}"
 echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
@@ -454,23 +465,27 @@ rm -rf /etc/per
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 mkdir -p /etc/nsdomain
-mkdir -p /etc/per
-touch /etc/per/id
-touch /etc/per/token
 touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/slwdomain
 touch /etc/v2ray/scdomain
-echo "$dn3" > /root/subdomainx
+echo "$dn3" > /root/domain
+echo "$dn3" > /root/scdomain
+echo "$dn3" > /etc/xray/scdomain
+echo "$dn3" > /etc/v2ray/scdomain
+echo "$dn3" > /etc/xray/domain
+echo "$dn3" > /etc/v2ray/domain
+echo "IP=$dn3" > /var/lib/ipvps.conf
+echo ""
 cd
 sleep 1
-fun_bar 'res3'
+fun_bar 'res1'
 clear
 rm /root/subdomainx
 elif [[ $domain2 == "4" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.slowapp.dev        ${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vpn-premium.tech        ${tyblue}│${NC}"
 echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
@@ -484,47 +499,21 @@ rm -rf /etc/per
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 mkdir -p /etc/nsdomain
-mkdir -p /etc/per
-touch /etc/per/id
-touch /etc/per/token
 touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/slwdomain
 touch /etc/v2ray/scdomain
-echo "$dn4" > /root/subdomainx
+echo "$dn4" > /root/domain
+echo "$dn4" > /root/scdomain
+echo "$dn4" > /etc/xray/scdomain
+echo "$dn4" > /etc/v2ray/scdomain
+echo "$dn4" > /etc/xray/domain
+echo "$dn4" > /etc/v2ray/domain
+echo "IP=$dn4" > /var/lib/ipvps.conf
+echo ""
 cd
 sleep 1
-fun_bar 'res4'
-clear
-rm /root/subdomainx
-elif [[ $domain2 == "5" ]]; then
-clear
-echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vipnvip.tech       ${tyblue}│${NC}"
-echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
-echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
-echo " "
-until [[ $dn4 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
-read -rp "Masukan subdomain kamu Disini tanpa spasi : " -e dn5
-done
-rm -rf /etc/xray
-rm -rf /etc/v2ray
-rm -rf /etc/nsdomain
-rm -rf /etc/per
-mkdir -p /etc/xray
-mkdir -p /etc/v2ray
-mkdir -p /etc/nsdomain
-mkdir -p /etc/per
-touch /etc/per/id
-touch /etc/per/token
-touch /etc/xray/domain
-touch /etc/v2ray/domain
-touch /etc/xray/slwdomain
-touch /etc/v2ray/scdomain
-echo "$dn5" > /root/subdomainx
-cd
-sleep 1
-fun_bar 'res5'
+fun_bar 'res1'
 fi
 if [[ $domain == "3" ]]; then
 clear
