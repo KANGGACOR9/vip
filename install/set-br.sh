@@ -2,7 +2,7 @@
 
 apt install rclone
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://github.com/KANGGACOR9/vip/main/install/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/KANGGACOR9/vip/main/install/rclone.conf"
 git clone  https://github.com/casper9/wondershaper.git
 cd wondershaper
 make install
