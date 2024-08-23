@@ -154,7 +154,7 @@ git remote add origin https://github.com/${USERGIT}/permission >/dev/null 2>&1
 git push -f https://${APIGIT}@github.com/${USERGIT}/permission >/dev/null 2>&1
 sleep 0.5
 rm ipmini
-elif [[ $kode == "RMBLVVIP" ]]; then
+elif [[ $kode == "RMBLVIP" ]]; then
 MYIP2=$(curl -sS ipv4.icanhazip.com)
 author2=$(cat /etc/profil)
 rm -rf /etc/github
@@ -185,7 +185,7 @@ git remote add origin https://github.com/${USERGIT}/permission >/dev/null 2>&1
 git push -f https://${APIGIT}@github.com/${USERGIT}/permission >/dev/null 2>&1
 sleep 0.5
 rm ipmini
-elif [[ $kode == "RMBLADMIN" ]]; then
+elif [[ $kode == "RMBLVIP" ]]; then
 MYIP3=$(curl -sS ipv4.icanhazip.com)
 author3=$(cat /etc/profil)
 rm -rf /etc/github
