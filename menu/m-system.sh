@@ -680,7 +680,6 @@ sleep 0.5
     mkdir /root/.acme.sh
     systemctl stop $STOPWEBSERVER
     systemctl stop nginx
-    systemctl stop haproxy
     curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
     chmod +x /root/.acme.sh/acme.sh
     /root/.acme.sh/acme.sh --upgrade --auto-upgrade
@@ -688,10 +687,8 @@ sleep 0.5
     /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
     ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
     chmod 777 /etc/xray/xray.key
-    cat /etc/xray/xray.key /etc/xray/xray.crt | tee /etc/haproxy/hap.pem
     systemctl restart nginx
     systemctl restart xray
-    systemctl restart haproxy
 menu
 }
 function clearcache(){
