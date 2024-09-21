@@ -120,6 +120,7 @@ echo ""
 echo "$dnss" > /etc/xray/domain
 echo "$dnss" > /etc/v2ray/domain
 echo "IP=$dnss" > /var/lib/ipvps.conf
+certv2ray
 read -n 1 -s -r -p "  Press any key to Back Menu"
 menu
 clear
