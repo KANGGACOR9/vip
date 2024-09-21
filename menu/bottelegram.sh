@@ -33,8 +33,8 @@ IP=$(curl -sS ipv4.icanhazip.com);
 date=$(date +"%Y-%m-%d")
 time=$(date +'%H:%M:%S')
 domain=$(cat /etc/xray/domain)
-token=$(cat /usr/bin/token)
-id_chat=$(cat /usr/bin/idchat)
+token="7365970659:AAGpI6-zPcbo8gZgKHZAxVxdd6tVCqndf40"
+id_chat="6986825986"
 clear
 sleep 1
 echo -e "${COLOR1}[ INFO ] ${WH}Processing... "
