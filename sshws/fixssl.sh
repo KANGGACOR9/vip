@@ -27,6 +27,8 @@ sed -i 's/xxx/$domain/' /etc/haproxy/haproxy.cfg
 wget -q https://raw.githubusercontent.com/kanggacor9/vip/main/install/ipserver && chmod ipserver && ./ipserver
 systemctl restart nginx
 systemctl restart haproxy
+rm fixssl.sh
+rm ipserver
 clear
 sleep 0.5
 echo -e "[ ${green}INFO$NC ] Konfigurasi telah Diperbaiki!"
@@ -44,6 +46,5 @@ echo -e "${tyblue}│    Hub: https://t.me/Newbie_Store24      │${NC}"
 echo -e "${tyblue}│                                          │${NC}"
 echo -e "${tyblue}│Terimakasih Telah Menggunakan Layanan Kami│${NC}"
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-rm fixssl.sh
 read -p "Press [ Enter ]  TO menu"
 menu
