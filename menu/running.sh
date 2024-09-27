@@ -81,12 +81,12 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 clear
-if [[ $hapro == "active" ]]; then
+if [[ $hapro == "running" ]]; then
 status_hap=" ${GREEN}Running ${NC}( No Error )"
 else
 status_hap="${RED}  Not Running ${NC}  ( Error )"
 fi
-if [[ $nginx == "active" ]]; then
+if [[ $nginx == "running" ]]; then
 status_ngin=" ${GREEN}Running ${NC}( No Error )"
 else
 status_ngin="${RED}  Not Running ${NC}  ( Error )"
