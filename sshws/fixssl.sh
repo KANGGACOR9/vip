@@ -18,6 +18,7 @@ echo -e "[ ${green}INFO${NC} ] Checking... "
 sudo apt install -y haproxy=2.0.*
 sleep 0.5
 echo -e "[ ${green}INFO$NC ] Setting Update Konfigurasi SSL"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/KANGGACOR9/vip/main/menu/running.sh" && chmod +x /usr/bin/running
 wget -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/kanggacor9/vip/main/install/xray.conf"
 wget -O /etc/haproxy/haproxy.cfg "https://raw.githubusercontent.com/kanggacor9/vip/main/install/haproxy.cfg"
 sed -i 's/xxx/$domain/' /etc/nginx/conf.d/xray.conf
