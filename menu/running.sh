@@ -412,7 +412,6 @@ read -n 1 -s -r -p "  Succes Start Service. Press any key to Back Menu"
 menu
 fi
 fi
-fi
 menu
 }
 echo -e ""
