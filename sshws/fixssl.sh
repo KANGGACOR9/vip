@@ -28,7 +28,6 @@ wget -q https://raw.githubusercontent.com/kanggacor9/vip/main/install/ipserver &
 systemctl restart nginx
 systemctl restart haproxy
 rm fixssl.sh
-rm ipserver
 clear
 sleep 0.5
 echo -e "[ ${green}INFO$NC ] Konfigurasi telah Diperbaiki!"
