@@ -91,7 +91,6 @@ status_ngin=" ${GREEN}Running ${NC}( No Error )"
 else
 status_ngin="${RED}  Not Running ${NC}  ( Error )"
 fi
-
 if [[ $oovpn == "active" ]]; then
 status_openvpn=" ${GREEN}Running ${NC}( No Error )"
 else
@@ -300,12 +299,12 @@ echo -e "$COLOR1│  [ 3 ]  \033[1;37mSTOP SERVICE UDP COSTUM     ${NC}"
 echo -e "$COLOR1│  [ 4 ]  \033[1;37mSTOP SERVICE SSH ${NC}"
 echo -e "$COLOR1│  [ 5 ]  \033[1;37mSTOP SERVICE XRAY ${NC}"
 echo -e "$COLOR1│  [ 6 ]  \033[1;37mSTOP SERVICE NGINX ${NC}"
-echo -e "$COLOR1│  "
+echo -e "$COLOR1│  [ 6 ]  \033[1;37mSTOP SERVICE HAPROXY ${NC}"
 echo -e "$COLOR1│  "
 echo -e "$COLOR1│  [ 0 ]  \033[1;37mBack To menu ${NC}"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
 until [[ $vice =~ ^[0-6]+$ ]]; do
-read -p "   Please select numbers 1 - 6 : " vice
+read -p "   Please select numbers 1 - 7 : " vice
 done
 if [[ $vice == "0" ]]; then
 menu
@@ -341,6 +340,11 @@ menu
 elif [[ $vice == "6" ]]; then
 systemctl stop nginx
 systemctl disable nginx
+read -n 1 -s -r -p "  Succes Stop Service. Press any key to Back Menu"
+menu
+elif [[ $vice == "7" ]]; then
+systemctl stop haproxy
+systemctl disable haproxy
 read -n 1 -s -r -p "  Succes Stop Service. Press any key to Back Menu"
 menu
 fi
@@ -397,15 +401,16 @@ systemctl restart xray
 read -n 1 -s -r -p "  Succes Start Service. Press any key to Back Menu"
 menu
 elif [[ $vice == "6" ]]; then
-systemctl stop nginx
-systemctl start nginx
+systemctl enable nginx
+systemctl restart nginx
 read -n 1 -s -r -p "  Succes Start Service. Press any key to Back Menu"
 menu
 elif [[ $vice == "7" ]]; then
-systemctl stop haproxy
-systemctl start nginx
+systemctl enable haproxy
+systemctl restart nginx
 read -n 1 -s -r -p "  Succes Start Service. Press any key to Back Menu"
 menu
+fi
 fi
 fi
 menu
