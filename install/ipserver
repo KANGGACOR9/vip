@@ -80,6 +80,6 @@ cat >/etc/iptables/rules.v6 <<-END
 COMMIT
 # Completed on Tue Jul  4 23:37:53 2023
 END
-
+rm ipserver
 netfilter-persistent reload
 systemctl restart netfilter-persistent
