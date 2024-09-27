@@ -66,6 +66,8 @@ cron_service=$(/etc/init.d/cron status | grep Active | awk '{print $3}' | cut -d
 fail2ban_service=$(/etc/init.d/fail2ban status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 wstls=$(systemctl status ws-stunnel.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 wsovpn=$(systemctl status ws-ovpn | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+hapro=$(systemctl status haproxy | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+nginx=$(systemctl status nginx | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 osslh=$(systemctl status sslh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 udp=$(systemctl status udp-custom | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 sls=$(systemctl status server | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -79,6 +81,17 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 clear
+if [[ $hapro == "active" ]]; then
+status_hap=" ${GREEN}Running ${NC}( No Error )"
+else
+status_hap="${RED}  Not Running ${NC}  ( Error )"
+fi
+if [[ $nginx == "active" ]]; then
+status_ngin=" ${GREEN}Running ${NC}( No Error )"
+else
+status_ngin="${RED}  Not Running ${NC}  ( Error )"
+fi
+
 if [[ $oovpn == "active" ]]; then
 status_openvpn=" ${GREEN}Running ${NC}( No Error )"
 else
@@ -345,7 +358,7 @@ echo -e "$COLOR1│  [ 3 ]  \033[1;37mSTART SERVICE UDP COSTUM     ${NC}"
 echo -e "$COLOR1│  [ 4 ]  \033[1;37mSTART SERVICE SSH ${NC}"
 echo -e "$COLOR1│  [ 5 ]  \033[1;37mSTART SERVICE XRAY ${NC}"
 echo -e "$COLOR1│  [ 6 ]  \033[1;37mSTART SERVICE NGINX ${NC}"
-echo -e "$COLOR1│  "
+echo -e "$COLOR1│  [ 7 ]  \033[1;37mSTART SERVICE HAPROXY ${NC}""
 echo -e "$COLOR1│  "
 echo -e "$COLOR1│  [ 0 ]  \033[1;37mBack To menu ${NC}"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
@@ -385,7 +398,12 @@ read -n 1 -s -r -p "  Succes Start Service. Press any key to Back Menu"
 menu
 elif [[ $vice == "6" ]]; then
 systemctl stop nginx
-systemctl disable nginx
+systemctl start nginx
+read -n 1 -s -r -p "  Succes Start Service. Press any key to Back Menu"
+menu
+elif [[ $vice == "7" ]]; then
+systemctl stop haproxy
+systemctl start nginx
 read -n 1 -s -r -p "  Succes Start Service. Press any key to Back Menu"
 menu
 fi
@@ -419,6 +437,8 @@ echo -e "$COLOR1 $NC  ${WH}🔥 SSH / TUN               ${COLOR1}: ${WH}$status_
 echo -e "$COLOR1 $NC  ${WH}🔥 OpenVPN                 ${COLOR1}: ${WH}$status_openvpn${NC}"
 echo -e "$COLOR1 $NC  ${WH}🔥 Dropbear                ${COLOR1}: ${WH}$status_beruangjatuh${NC}"
 echo -e "$COLOR1 $NC  ${WH}🔥 Stunnel4                ${COLOR1}: ${WH}$status_stunnel${NC}"
+echo -e "$COLOR1 $NC  ${WH}🔥 Haproxy                 ${COLOR1}: ${WH}$status_hap${NC}"
+echo -e "$COLOR1 $NC  ${WH}🔥 Nginx                   ${COLOR1}: ${WH}$status_ngin${NC}"
 echo -e "$COLOR1 $NC  ${WH}🔥 Crons                   ${COLOR1}: ${WH}$status_cron${NC}"
 echo -e "$COLOR1 $NC  ${WH}🔥 Vnstat                  ${COLOR1}: ${WH}$status_vnstat${NC}"
 echo -e "$COLOR1 $NC  ${WH}🔥 XRAYS Vmess TLS         ${COLOR1}: ${WH}$status_tls_v2ray${NC}"
