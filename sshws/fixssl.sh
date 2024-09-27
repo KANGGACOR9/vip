@@ -24,7 +24,7 @@ wget -O /etc/haproxy/haproxy.cfg "https://raw.githubusercontent.com/kanggacor9/v
 cat /etc/xray/xray.key /etc/xray/xray.crt | tee /etc/haproxy/hap.pem
 sed -i 's/xxx/$domain/' /etc/nginx/conf.d/xray.conf
 sed -i 's/xxx/$domain/' /etc/haproxy/haproxy.cfg
-wget -q https://raw.githubusercontent.com/kanggacor9/vip/main/install/ipserver && chmod ipserver && ./ipserver
+wget -q https://raw.githubusercontent.com/kanggacor9/vip/main/install/ipserver && chmod +x ipserver && ./ipserver
 systemctl restart nginx
 systemctl restart haproxy
 rm fixssl.sh
