@@ -16,6 +16,7 @@ apt upgrade -y
 apt dist-upgrade -y
 apt install sudo -y
 sudo apt-get clean all
+sudo apt install -y haproxy=2.0.*
 apt install -y debconf-utils
 apt-get remove --purge ufw firewalld -y
 apt-get remove --purge exim4 -y
