@@ -34,14 +34,6 @@ fi
 #checking_sc
 cd
 ipsaya=$(wget -qO- ifconfig.me)
-cd /etc
-nmap -p 22 $ipsaya > cekip
-cpu=$(grep -c -E "open" "cekip")
-if [[ ${cpu} == '0' ]]; then
-apt install nmap -y
-shutdown -r now
-fi
-cd
 today=$(date -d "0 days" +"%Y-%m-%d")
 Exp2=$(curl -sS https://raw.githubusercontent.com/KANGGACOR9/permission/main/ipmini | grep $ipsaya | awk '{print $3}')
 d1=$(date -d "$Exp2" +%s)
