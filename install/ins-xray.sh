@@ -420,6 +420,7 @@ systemctl daemon-reload
 systemctl enable xray
 systemctl restart xray
 systemctl restart nginx
+systemctl enable haproxy
 systemctl restart haproxy
 systemctl enable runn
 systemctl restart runn
