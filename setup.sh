@@ -814,12 +814,12 @@ rm /root/set-br.sh >/dev/null 2>&1
 rm /root/ohp.sh >/dev/null 2>&1
 rm /root/update.sh >/dev/null 2>&1
 rm /root/slowdns.sh >/dev/null 2>&1
+rm /root/udp-custom.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 sleep 3
 echo  ""
 cd
 iinfo
-rm -rf *
 echo -e "${tyblue}┌────────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}│  Install SCRIPT SELESAI..                  │${NC}"
 echo -e "${tyblue}└────────────────────────────────────────────┘${NC}"
