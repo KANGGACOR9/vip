@@ -7,7 +7,25 @@ NC='\e[0m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 
-
+if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
+echo "Setup Dependencies $(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')"
+sudo apt update -y
+add-apt-repository ppa:vbernat/haproxy-2.0 -y
+apt-get -y install haproxy=2.0.\*
+elif [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "debian" ]]; then
+echo "Setup Dependencies For OS Is $(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')"
+curl https://haproxy.debian.net/bernat.debian.org.gpg |
+gpg --dearmor >/usr/share/keyrings/haproxy.debian.net.gpg
+echo deb "[signed-by=/usr/share/keyrings/haproxy.debian.net.gpg]" \
+http://haproxy.debian.net buster-backports-1.8 main \
+>/etc/apt/sources.list.d/haproxy.list
+sudo apt-get update
+apt-get -y install haproxy=1.8.\*
+else
+echo -e " Your OS Is Not Supported ($(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g') )"
+exit 1
+fi
+clear
 echo "           Tools install...!"
 echo "                  Progress..."
 sleep 0.5
@@ -16,7 +34,6 @@ apt upgrade -y
 apt dist-upgrade -y
 apt install sudo -y
 sudo apt-get clean all
-sudo apt install -y haproxy=2.0.*
 apt install -y debconf-utils
 apt-get remove --purge ufw firewalld -y
 apt-get remove --purge exim4 -y
