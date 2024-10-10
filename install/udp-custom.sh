@@ -51,6 +51,8 @@ WantedBy=default.target
 EOF
 fi
 
+systemctl daemon-reload
+
 echo start service udp-custom
 systemctl start udp-custom &>/dev/null
 
