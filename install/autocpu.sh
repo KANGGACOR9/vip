@@ -1,4 +1,11 @@
 #!/bin/bash
+res=$( systemctl status systemd-resolved.service | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+if [[ $res == "running" ]]; then
+echo -ne
+else
+systemctl restart systemd-resolved.service
+systemctl start systemd-resolved.service
+fi
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 colornow=$(cat /etc/rmbl/theme/color.conf)
 NC="\e[0m"
@@ -26,8 +33,6 @@ echo -e "             \033[0;33mContact Your Admin ${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 systemctl stop nginx
 systemctl stop kyt
-systemctl stop xray
-systemctl stop ws-stunnel
 exit
 fi
 }
@@ -73,13 +78,6 @@ cd
 if [[ -e /usr/bin/kyt ]]; then
 nginx=$( systemctl status kyt | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
-echo -ne
-else
-systemctl restart kyt
-systemctl start kyt
-fi
-kyt=$( systemctl status kyt | grep "TERM" | wc -l )
-if [[ $kyt == "0" ]]; then
 echo -ne
 else
 systemctl restart kyt
