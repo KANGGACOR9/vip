@@ -767,7 +767,9 @@ TEXT="
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
 }
-
+echo "net.netfilter.nf_conntrack_max=262144" >> /etc/sysctl.conf
+echo "net.netfilter.nf_conntrack_tcp_timeout_time_wait=30" >> /etc/sysctl.conf
+sudo sysctl -p
 CEKIP
 Casper3
 cat> /root/.profile << END
