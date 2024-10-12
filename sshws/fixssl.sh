@@ -35,6 +35,9 @@ echo -e " Your OS Is Not Supported ($(cat /etc/os-release | grep -w PRETTY_NAME 
 exit 1
 fi
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/kanggacor9/vip/main/install/nginx.conf"
+echo "net.netfilter.nf_conntrack_max=262144" >> /etc/sysctl.conf
+echo "net.netfilter.nf_conntrack_tcp_timeout_time_wait=30" >> /etc/sysctl.conf
+sudo sysctl -p
 sleep 0.5
 echo -e "[ ${green}INFO$NC ] Setting Update Konfigurasi SSL"
 sed -i "s/8880/8881/" /etc/stunnel/stunnel.conf
