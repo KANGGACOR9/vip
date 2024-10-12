@@ -9,6 +9,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 tyblue='\e[1;36m'
 NC='\e[0m'
+
 domain=$(cat /etc/xray/domain)
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}│           FIX SC BY NEWBIE STORE         │${NC}"
@@ -33,6 +34,7 @@ else
 echo -e " Your OS Is Not Supported ($(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g') )"
 exit 1
 fi
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/kanggacor9/vip/main/install/nginx.conf"
 sleep 0.5
 echo -e "[ ${green}INFO$NC ] Setting Update Konfigurasi SSL"
 sed -i "s/8880/8881/" /etc/stunnel/stunnel.conf
