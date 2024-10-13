@@ -111,3 +111,7 @@ bash2=$( pgrep menu | wc -l )
 if [[ $bash2 -gt "20" ]]; then
 pkill menu
 fi
+bash2=$( pgrep m-sshovp | wc -l )
+if [[ $bash2 -gt "20" ]]; then
+pkill m-sshovp
+fi
