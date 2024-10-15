@@ -1216,7 +1216,7 @@ case $opt in
 00 | 0) clear ; menu ; exit ;;
 X  | 0) clear ; m-sshovpn ;;
 x) exit ;;
-*) echo "Anda salah tekan " ; sleep 1 ; m-sshovpn ;;
+*) echo "Anda salah tekan " ; sleep 1 ;;
 esac
     read -p "Tekan Enter untuk kembali.."
 done
