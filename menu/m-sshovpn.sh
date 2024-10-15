@@ -1181,6 +1181,7 @@ read -n 1 -s -r -p "Press any key to back on menu"
 m-sshovpn
 }
 clear
+while true; do
 author=$(cat /etc/profil)
 echo -e " $COLOR1╔════════════════════════════════════════════════════╗${NC}"
 echo -e " $COLOR1║${NC}${COLBG1}             ${WH}• SSH PANEL MENU •                     ${NC}$COLOR1║ $NC"
@@ -1217,3 +1218,5 @@ X  | 0) clear ; m-sshovpn ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; m-sshovpn ;;
 esac
+    read -p "Tekan Enter untuk kembali.."
+done
