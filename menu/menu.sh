@@ -374,6 +374,7 @@ menu
 clear
 clear && clear && clear
 clear;clear;clear
+while true; do
 echo -e " $COLOR1╔══════════════════════════════════════════════════════════╗${NC}"
 echo -e " $COLOR1║${NC}${COLBG1}                  ${WH} • KANGGACOR VIP TUNNELING •            ${NC}$COLOR1║${NC}"
 echo -e " $COLOR1╚══════════════════════════════════════════════════════════╝${NC}"
@@ -510,5 +511,9 @@ case $opt in
 77 | 77) clear ; newx ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
-*) clear ; menu ;;
+*) echo -e "${RED}Input tidak valid!${NC} Silakan pilih menu yang benar."
+sleep 2 ;;
 esac
+    # Menunggu input sebelum kembali ke menu
+    read -p "Tekan Enter untuk kembali ke menu..."
+done
